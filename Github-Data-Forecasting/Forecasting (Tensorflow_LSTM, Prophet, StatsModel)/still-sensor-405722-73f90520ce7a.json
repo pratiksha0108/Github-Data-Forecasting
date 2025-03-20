@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "still-sensor-405722",
+  "private_key_id": "73f90520ce7a8434269af9ba3aee961d863440cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCuCo0sHmuBCdxU\nwdzvMcYbmcfaTADRV/VNBir70cFs81M4Ixv3c4s9Wvn2lX6nxoUCVQUZRzbDIwhb\n+H8fpwt9KcV5JstjWKqXjllznANtK8ermvu9B328TN9ChtMQrLYUn87dGoKd4VcT\nr0vo7YbvGXmbw05ITcPRzBiws+Cm1E7CYptjWNJ+VJ3AYwtR/SNVN4nWeNDZpl9M\nY23mDQfE4PuouIQs7X/gOh7diK5c4NhiqzUwe3e9lZr6eg7612AdHrzXAWCO2YSg\n1F80NO8+QlXvgoHcCHlv6HRk2jyppYBYOLQGUvKSx0ehemipcfCjium1s+rts4kI\nymiPpz8HAgMBAAECggEAAgsvGqDPGqYW2dPw84D1H5T9tDj0ihMP6ViiMgKF1INC\n9MOoNSDzf3rNSzGLEMWTk7Il4sA/L2BHy0b34Xf8Q0QjTewt/BcXvSi3ei/q9BjN\nFUrt5Plai5/wmzXPhPdSOlLqFM26vzVKn8Jofe4mZQ06h6EAM5zeKMry5GqWCOQH\nhRG5Yt9GP/BBz9WUD+YrwLd5r0a2FTCW0quVwCDrt4bSyl2QVpjsvsL+izVN5ulc\naLxYiSYQTuxKkAIkRTK1eEXDQzrgn1p/ZuWuhmCIr1pgnysyKlUB+3oBrrZ+0W2G\nw9JomFMqPUGTGw25P8+5td2onSIxEcghU0EeFkiZKQKBgQDXyYzzmTObYbdsaoZ9\nMuOK/EyqaMQGJaod4eAT5GzeSZ2cDcc4mdP4TzfRcew0/YCBSr+J9sYxXVJ1ej0Q\n7t8q5sU0TzD09EObgADq8hngXiPnDf9eTVm5UNZSC7IwgDGD7MMIJbynpKls8/L/\nGT/sGob0OgWhXc/MffXVlMIeqwKBgQDOeXFHyYuhujfE6GJQ5ankX0HMmPZAozlp\ncCzRJM5ba6+2dbXNKRYKpA6OdTaxeLaIe+SXxF4QHEv3cppT2mlHFjH1sMdkipQL\nKkFHeR3LMcnB9Rq3plair9NykDj6jo9Xi7d+M9SATLMMIRBRJi7BVTBf9B5GuDd7\nW2Yda5QxFQKBgQDDJIcuaLaN5yGcjv1Oza2PLDkcxp+3O2qLmZAuDR4TLBm3XZJz\nclGKNgGxjEfjZ/lFc1aiKqPzUoTWrpP48zyorIdcld0dOKTHREwQLJ8QE7J+Kl9t\nZaAlgaBAFEmxqMyelIePn6jrJnL9j+OJpMj0+MxgovQiiRb5xFOEMgIW/wKBgAEf\n7jsK4QTXg9hBv89bAOrqjew0ZRsDCJwHbWcSQUGEO6fNyli8wY77R80E3HBpDO1/\nZ0ZgXnbOAKfvauHMDcjCWTFSbjOhAZ9x8nsWMNBbjBLPZ/7aHBy0wn0cRgMvZZ5/\nd1drptuwD0WgpHscryKEeUf8h3GxLTQx0kOUw3DlAoGBAKDTbyFBjZKVbvLhJMnf\n4KGcDyjYQ6ilJeia+CQCF+A6BZAcZgdOHQgqBD0pjGKx63g/+B92iWTNZbiRKfrF\n1910UbNAGP6FTDH7UbamZbkALutGzidhB06gfeDsWCBMbZ0QiBKBzu6u3NaaBpEe\nKexRXixp7rrQKfC+VWiypo6Z\n-----END PRIVATE KEY-----\n",
+  "client_email": "lstm-service-account@still-sensor-405722.iam.gserviceaccount.com",
+  "client_id": "107455730669704573668",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lstm-service-account%40still-sensor-405722.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
