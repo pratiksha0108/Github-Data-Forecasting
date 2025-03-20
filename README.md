@@ -2,7 +2,7 @@
 An interactive dashboard that retrieves GitHub repository data using the GitHub API, visualizes trends with charts, and forecasts key metrics using machine learning models like LSTM, Facebook Prophet, and StatsModel. Built with Flask, React, and Docker.
 
 
-## 🚀 Features
+## Features
 
 - **GitHub API Integration**: Fetches repository data (issues, stars, forks, commits, pull requests, contributors, etc.).
 - **Data Visualization**: Line charts, bar charts, and stacked bar charts for repo trends.
@@ -12,7 +12,7 @@ An interactive dashboard that retrieves GitHub repository data using the GitHub 
   - StatsModel
 - **Microservices Architecture**: Flask for backend, React for frontend, deployed using Docker & Google Cloud.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Stack                  | Technologies Used                                     |
 |------------------------|-------------------------------------------------------|
@@ -32,7 +32,7 @@ An interactive dashboard that retrieves GitHub repository data using the GitHub 
 - **Forecasting Charts**:
   - Predicted trends for issues, pull requests, commits, branches, contributors, and releases.
 
-## 🔮 Forecasting Objectives
+## Forecasting Objectives
 
 Using ML models, we predict:
 1. The day of the week with the maximum number of issues created.
@@ -54,15 +54,15 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 flask run
 
-### Frontend Setup (React)
+**### Frontend Setup (React)**
 cd frontend
 npm install
 npm start
 
-### Deploying with Docker
+**### Deploying with Docker**
 docker-compose up --build
 
-## Additional Documentation:
+**## Additional Documentation:**
 For a deeper understanding of each module, refer to the individual README files inside:
 
 Flask/readme.txt → Details on Flask API & GitHub Data Retrieval.
