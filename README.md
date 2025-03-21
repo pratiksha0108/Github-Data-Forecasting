@@ -22,7 +22,7 @@ An interactive dashboard that retrieves GitHub repository data using the GitHub 
 | **Data Visualization** | Chart.js, Recharts                                    |
 | **Deployment**         | Docker, Google Cloud                                          |
 
-## 📊 Data Visualization
+##  Data Visualization
 
 - **Line Chart**: Issues over time for each repository.
 - **Bar Charts**:
@@ -47,25 +47,26 @@ Using ML models, we predict:
 - Docker (for deployment)
 
 ### Backend Setup (Flask API)
-```sh
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-flask run
 
-**### Frontend Setup (React)**
-cd frontend
-npm install
-npm start
+- cd backend
+- python -m venv venv
+- source venv/bin/activate  # On Windows: venv\Scripts\activate
+- pip install -r requirements.txt
+- flask run
 
-**### Deploying with Docker**
-docker-compose up --build
+### Frontend Setup (React)
 
-**## Additional Documentation:**
-For a deeper understanding of each module, refer to the individual README files inside:
+- cd frontend
+- npm install
+- npm start
 
-Flask/readme.txt → Details on Flask API & GitHub Data Retrieval.
-Forecasting/readme.txt → Setup instructions for React Frontend.
-React/readme.txt → Machine Learning forecasting using LSTM.
+### Deploying with Docker
+- docker-compose up --build
+
+## Additional Documentation
+For a deeper understanding of each module, refer to the individual README files inside each component:
+
+- **Flask/readme.txt**: Details on GitHub API data retrieval, setup procedures, forecasting pipeline, and Google Cloud deployment instructions.
+- **Forecasting/readme.txt**: Information about LSTM implementation, time series forecasting, and Google Cloud Storage configuration.
+- **React/readme.txt**: Setup instructions for React frontend, component architecture, and UI implementation details.
 
