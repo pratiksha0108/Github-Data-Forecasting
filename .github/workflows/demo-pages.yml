@@ -21,11 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: node --test demo/tests.test.mjs
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: demo
+          path: site
       - uses: actions/deploy-pages@v5
         id: deployment
-

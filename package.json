@@ -1,0 +1,10 @@
+{
+  "name": "repo-radar-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test demo/tests.test.mjs scripts/build.test.mjs",
+    "build": "node scripts/build-demo.mjs"
+  },
+  "devDependencies": {"esbuild": "0.25.10"}
+}

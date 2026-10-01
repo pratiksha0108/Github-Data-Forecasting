@@ -144,6 +144,27 @@
         available in the GitHub repository.
       </p></noscript
     >
+    <script>
+      // A missing release file must never leave an endless loading screen.
+      window.radarBootFailure = function () {
+        if (document.documentElement.dataset.radarReady === "true") return;
+        var workspace = document.getElementById("workspace");
+        workspace.setAttribute("aria-busy", "false");
+        workspace.innerHTML = '<section class="panel"><h2>Let’s reconnect your workspace.</h2><p class="sub">The app could not start. A cached release or interrupted connection may be responsible. Your files have not been uploaded.</p><button class="primary" id="reload-release">Reload latest version ↻</button><p class="sub"><a href="./data/snapshot.json">The source dataset is still available here.</a></p></section>';
+        document.getElementById("reload-release").onclick = function () {
+          location.replace(location.pathname + "?refresh=" + Date.now());
+        };
+      };
+      window.radarBootTimer = setTimeout(window.radarBootFailure, 12000);
+      window.addEventListener("error", function () {
+        if (document.documentElement.dataset.radarReady !== "true") window.radarBootFailure();
+      });
+      // Compatibility for browsers predating Array.at, without changing newer ones.
+      if (!Array.prototype.at) Object.defineProperty(Array.prototype, "at", {
+        value: function(index) { var n = Math.trunc(index) || 0; return this[n < 0 ? this.length + n : n]; },
+        configurable: true, writable: true
+      });
+    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 import { $, esc, announce } from "./common.mjs";
+import bundledSnapshot from "./data/snapshot.json" with { type: "json" };
 import {
   METHODS,
   forecast,
@@ -964,14 +965,15 @@ function updateRepoOptions() {
   $("#repo").disabled = false;
 }
 try {
-  const response = await fetch("./data/snapshot.json");
-  if (!response.ok) throw Error("The snapshot could not be loaded.");
-  snapshot = await response.json();
+  // The release bundles this attributed snapshot, so startup needs no data request.
+  snapshot = JSON.parse(JSON.stringify(bundledSnapshot));
   repositories = snapshot.repositories;
   for (const repo of repositories) repo.months = validateRows(repo.months);
   updateRepoOptions();
   chooseDefaults();
   render();
+  document.documentElement.dataset.radarReady = "true";
+  window.clearTimeout(window.radarBootTimer);
 } catch (error) {
   $("#workspace").setAttribute("aria-busy", "false");
   $("#workspace").innerHTML =

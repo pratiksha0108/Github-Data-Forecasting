@@ -38,7 +38,7 @@ export function forecast(values, horizon, method = "average") {
     !Number.isInteger(horizon) ||
     horizon < 1 ||
     horizon > 12 ||
-    !Object.hasOwn(METHODS, method)
+    !Object.prototype.hasOwnProperty.call(METHODS, method)
   )
     throw Error("Invalid forecast inputs.");
   if (method === "seasonal" && values.length < 12)

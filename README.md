@@ -14,11 +14,13 @@ The browser experience is in `demo/`. It uses an attributed fixed snapshot of Fl
 ### Run and verify this version
 
 ```sh
-python3 -m http.server 4321 --bind 127.0.0.1 --directory demo
-node --test demo/tests.test.mjs
+npm ci
+npm test
+npm run build
+python3 -m http.server 4321 --bind 127.0.0.1 --directory site
 ```
 
-Open http://127.0.0.1:4321/. Use a local server because browser modules and the dataset require HTTP.
+Open http://127.0.0.1:4321/. The build packages the code and attributed dataset into one versioned browser file. It requires no separate JSON request or external font service at startup. A timed recovery screen handles missing or interrupted release assets. Publish `site/`, not the editable `demo/` source directory.
 
 To reproduce the bundled data extraction with Node 24 and internet access:
 
