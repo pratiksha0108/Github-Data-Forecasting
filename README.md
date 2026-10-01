@@ -1,4 +1,41 @@
 # Github-Data-Forecasting
+
+## Live portfolio experience: Repo Radar
+
+[Open Repo Radar](https://pratiksha0108.github.io/Github-Data-Forecasting/) to explore real public GitHub activity, compare four statistical baselines, and stress-test a hypothetical capacity plan.
+
+The browser experience is in `demo/`. It uses an attributed fixed snapshot of Flask and Jinja metadata, not synthetic history. It does not run the separate LSTM, Prophet, Flask or GCP services described below.
+
+- 36 complete monthly observations per repository, October 2023 through September 2026.
+- Six rolling one-month model tests with MAE and WAPE, plus per-month prediction inspection.
+- Local-only CSV import, adjustable volume/capacity/queue assumptions, CSV/JSON exports and a decision brief.
+- No API key or paid service required. Reduced-motion and keyboard interactions supported.
+
+### Run and verify this version
+
+```sh
+python3 -m http.server 4321 --bind 127.0.0.1 --directory demo
+node --test demo/tests.test.mjs
+```
+
+Open http://127.0.0.1:4321/. Use a local server because browser modules and the dataset require HTTP.
+
+To reproduce the bundled data extraction with Node 24 and internet access:
+
+```sh
+node scripts/refresh-demo-data.mjs
+```
+
+The script fetches public metadata, aggregates monthly counts and writes `demo/data/snapshot.json` only after complete retrieval. Unauthenticated API rate limits apply. Inspect the snapshot diff and run tests before committing a refresh. No refresh runs automatically on visitors' browsers.
+
+[Product brief, methodology and evaluation plan](docs/repo-radar-product-brief.md)
+
+### Limitations
+
+This is an independent portfolio experiment, not a production staffing or forecasting service. Counts are not productivity. Six one-month tests do not establish longer-horizon accuracy; the model winner is selected on the evaluation period without an independent final test set. Planning capacity and backlog are hypothetical.
+
+## Original project and services
+
 An interactive dashboard that retrieves GitHub repository data using the GitHub API, visualizes trends with charts, and forecasts key metrics using machine learning models like LSTM, Facebook Prophet, and StatsModel. Built with Flask, React, and Docker.
 
 
@@ -69,4 +106,3 @@ For a deeper understanding of each module, refer to the individual README files 
 - **Flask/readme.txt**: Details on GitHub API data retrieval, setup procedures, forecasting pipeline, and Google Cloud deployment instructions.
 - **Forecasting/readme.txt**: Information about LSTM implementation, time series forecasting, and Google Cloud Storage configuration.
 - **React/readme.txt**: Setup instructions for React frontend, component architecture, and UI implementation details.
-
